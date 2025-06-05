@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="./script.js" defer></script>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <title>Enhanced To-Do List</title>
+</head>
+
+<body>
+  <div class="container-title">
+    <h1>To Do List</h1>
+  </div>
+
+  <!-- Mood Selector -->
+  <div class="mood-selector">
+    <span>Select Mood:</span>
+    <button onclick="setMood('happy')">😊</button>
+    <button onclick="setMood('sad')">😩</button>
+    <button onclick="setMood('energetic')">⚡</button>
+  </div>
+
+  <!-- Category Selector -->
+  <div class="category-selector">
+    <label for="category">Category:</label>
+    <select id="category">
+      <option value="📚 Study">📚 Study</option>
+      <option value="🛍 Shopping">🛍 Shopping</option>
+      <option value="🏋 Workout">🏋 Workout</option>
+      <option value="🧠 Brainstorm">🧠 Brainstorm</option>
+    </select>
+  </div>
+
+  <!-- Input Section -->
+  <div class="container">
+    <div class="inputcol">
+      <textarea name="text" class="textarea" placeholder="Write your task..."></textarea>
+      <button type="button" class="buttoninput"><i class="fa-solid fa-check"></i></button>
+    </div>
+  </div>
+
+  <!-- To-do List Section -->
+  <div class="todolist"></div>
+
+  <!-- Sticky Notes Section -->
+  <div class="sticky-notes-panel">
+    <h3>📝 Sticky Notes</h3>
+    <button onclick="createStickyNote()">➕ Add Note</button>
+    <div id="sticky-container"></div>
+  </div>
+</body>
+
+</html>
